@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Free Ollie Ocean Adventure Activity Pack</title>
+    <style>
+      :root {
+        --navy: #17324d;
+        --aqua: #2ec4d6;
+        --seafoam: #a7efd2;
+        --coral: #ff7c70;
+        --sun: #ffd166;
+        --purple: #b89cff;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        color: var(--navy);
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f7fffc;
+      }
+      .page {
+        width: 8.5in;
+        min-height: 11in;
+        margin: 0 auto;
+        padding: 0.55in;
+        background: white;
+        page-break-after: always;
+        position: relative;
+        overflow: hidden;
+      }
+      .page::before {
+        content: "";
+        position: absolute;
+        inset: 0.2in;
+        border: 3px solid rgba(46, 196, 214, 0.25);
+        border-radius: 24px;
+        pointer-events: none;
+      }
+      h1 {
+        margin: 0;
+        font-size: 34px;
+        line-height: 1.05;
+        text-align: center;
+      }
+      h2 {
+        margin: 0 0 10px;
+        font-size: 28px;
+        line-height: 1.1;
+        text-align: center;
+      }
+      .eyebrow {
+        margin: 0 0 10px;
+        color: var(--coral);
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 0.16em;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      .subtitle {
+        max-width: 560px;
+        margin: 12px auto 24px;
+        color: #46627a;
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: center;
+      }
+      .art-box {
+        height: 6.8in;
+        border: 3px dashed rgba(23, 50, 77, 0.24);
+        border-radius: 24px;
+        display: grid;
+        place-items: center;
+        margin-top: 22px;
+        padding: 18px;
+      }
+      svg {
+        max-width: 100%;
+        max-height: 100%;
+      }
+      .prompt {
+        margin-top: 18px;
+        padding: 14px 18px;
+        border-radius: 18px;
+        background: #fffaf0;
+        font-weight: 800;
+        line-height: 1.45;
+      }
+      .maze {
+        width: 6.7in;
+        height: 6.7in;
+        border: 8px solid var(--navy);
+        margin: 24px auto;
+        position: relative;
+        background:
+          linear-gradient(var(--navy), var(--navy)) 16% 0 / 8px 62% no-repeat,
+          linear-gradient(var(--navy), var(--navy)) 32% 38% / 8px 62% no-repeat,
+          linear-gradient(var(--navy), var(--navy)) 48% 0 / 8px 58% no-repeat,
+          linear-gradient(var(--navy), var(--navy)) 64% 42% / 8px 58% no-repeat,
+          linear-gradient(var(--navy), var(--navy)) 80% 0 / 8px 62% no-repeat,
+          linear-gradient(90deg, var(--navy), var(--navy)) 0 20% / 45% 8px no-repeat,
+          linear-gradient(90deg, var(--navy), var(--navy)) 30% 40% / 45% 8px no-repeat,
+          linear-gradient(90deg, var(--navy), var(--navy)) 0 60% / 48% 8px no-repeat,
+          linear-gradient(90deg, var(--navy), var(--navy)) 52% 75% / 48% 8px no-repeat;
+      }
+      .start, .finish {
+        position: absolute;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: var(--sun);
+        font-weight: 900;
+      }
+      .start { left: 12px; top: 12px; }
+      .finish { right: 12px; bottom: 12px; }
+      .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+        margin-top: 22px;
+      }
+      .scene {
+        min-height: 5.2in;
+        border: 3px solid rgba(23, 50, 77, 0.2);
+        border-radius: 22px;
+        padding: 14px;
+      }
+      .match-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin-top: 28px;
+      }
+      .match-card {
+        min-height: 96px;
+        border: 2px solid rgba(23, 50, 77, 0.22);
+        border-radius: 18px;
+        padding: 16px;
+        font-size: 18px;
+        font-weight: 900;
+      }
+      .certificate {
+        height: 7.2in;
+        border: 8px double var(--navy);
+        border-radius: 28px;
+        display: grid;
+        align-content: center;
+        justify-items: center;
+        gap: 18px;
+        margin-top: 32px;
+        text-align: center;
+      }
+      .line {
+        width: 75%;
+        border-bottom: 3px solid var(--navy);
+        height: 28px;
+      }
+      @media print {
+        body { background: white; }
+        .page { margin: 0; box-shadow: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="page">
+      <p class="eyebrow">Sparkle Bay</p>
+      <h1>Free Ollie Ocean Adventure Activity Pack</h1>
+      <p class="subtitle">Color, solve, match, and celebrate kindness with Ollie the Octopus and the Sparkle Bay crew.</p>
+      <div class="art-box">
+        <svg viewBox="0 0 600 520" aria-label="Ollie coloring page">
+          <g fill="none" stroke="#17324d" stroke-linecap="round" stroke-linejoin="round" stroke-width="12">
+            <path d="M170 282C92 242 52 250 34 314M430 282c78-40 118-32 136 32M162 332C92 372 62 426 42 486M438 332c70 40 100 94 120 154M220 358c-48 34-82 72-96 120M380 358c48 34 82 72 96 120" />
+            <ellipse cx="300" cy="230" rx="142" ry="118" />
+            <ellipse cx="222" cy="108" rx="52" ry="68" />
+            <ellipse cx="378" cy="108" rx="52" ry="68" />
+            <circle cx="202" cy="100" r="18" />
+            <circle cx="398" cy="100" r="18" />
+            <path d="M260 218c24-30 56-30 80 0M252 246c36 28 82 28 118 0M282 295c16 12 34 12 52 0" />
+            <circle cx="214" cy="206" r="5" /><circle cx="246" cy="176" r="5" /><circle cx="348" cy="178" r="5" /><circle cx="386" cy="214" r="5" />
+          </g>
+        </svg>
+      </div>
+      <p class="prompt">Color Ollie. Add a giant Rainbow Bubble somewhere in the picture.</p>
+    </section>
+
+    <section class="page">
+      <p class="eyebrow">Best Friend</p>
+      <h2>Stella Starfish Coloring Page</h2>
+      <div class="art-box">
+        <svg viewBox="0 0 600 520" aria-label="Stella coloring page">
+          <g fill="none" stroke="#17324d" stroke-linecap="round" stroke-linejoin="round" stroke-width="12">
+            <path d="M300 42l62 154 166-58-88 142 124 112-172 2-92 132-92-132-172-2 124-112-88-142 166 58z" />
+            <circle cx="260" cy="238" r="28" /><circle cx="340" cy="238" r="28" />
+            <circle cx="268" cy="242" r="6" /><circle cx="348" cy="242" r="6" />
+            <path d="M246 310c36 38 76 38 112 0" />
+            <circle cx="206" cy="172" r="9" /><circle cx="412" cy="170" r="9" /><circle cx="178" cy="348" r="9" /><circle cx="424" cy="348" r="9" />
+          </g>
+        </svg>
+      </div>
+      <p class="prompt">Stella always sees the bright side. Draw three sparkles around her.</p>
+    </section>
+
+    <section class="page">
+      <p class="eyebrow">Courage Character</p>
+      <h2>Spike the Pufferfish Coloring Page</h2>
+      <div class="art-box">
+        <svg viewBox="0 0 600 520" aria-label="Spike coloring page">
+          <g fill="none" stroke="#17324d" stroke-linecap="round" stroke-linejoin="round" stroke-width="12">
+            <path d="M120 260L42 180v160zM480 260l78-80v160z" />
+            <ellipse cx="300" cy="260" rx="178" ry="132" />
+            <path d="M140 138l26-56 26 56M202 114l26-56 26 56M264 102l26-56 26 56M326 102l26-56 26 56M388 114l26-56 26 56" />
+            <ellipse cx="300" cy="292" rx="98" ry="62" />
+            <circle cx="250" cy="210" r="30" /><circle cx="350" cy="210" r="30" />
+            <circle cx="250" cy="210" r="8" /><circle cx="350" cy="210" r="8" />
+            <path d="M260 316c28 20 52 20 80 0" />
+          </g>
+        </svg>
+      </div>
+      <p class="prompt">Spike says, "I can do hard things!" Draw bubbles for each brave thing you tried.</p>
+    </section>
+
+    <section class="page">
+      <p class="eyebrow">Adventure Starter</p>
+      <h2>Rainbow Bubble Coloring Page</h2>
+      <div class="art-box">
+        <svg viewBox="0 0 600 520" aria-label="Rainbow Bubble coloring page">
+          <g fill="none" stroke="#17324d" stroke-linecap="round" stroke-linejoin="round" stroke-width="12">
+            <circle cx="300" cy="250" r="142" />
+            <path d="M190 254c42-96 182-110 230-10M214 300c46-72 138-84 182-8M244 346c38-42 92-48 128-2" />
+            <circle cx="220" cy="132" r="28" /><circle cx="414" cy="370" r="18" /><circle cx="450" cy="152" r="14" />
+            <path d="M110 148c-30 30-44 70-44 116M490 148c30 30 44 70 44 116" />
+          </g>
+        </svg>
+      </div>
+      <p class="prompt">Color each stripe. What adventure do you think the Rainbow Bubble brings today?</p>
+    </section>
+
+    <section class="page">
+      <p class="eyebrow">Ocean Maze</p>
+      <h2>Help Ollie Reach the Rainbow Bubble</h2>
+      <div class="maze"><span class="start">Start</span><span class="finish">Finish</span></div>
+      <p class="prompt">Trace a path through Sparkle Bay. Try again if you get tangled in the kelp.</p>
+    </section>
+
+    <section class="page">
+      <p class="eyebrow">Spot the Difference</p>
+      <h2>Find 5 Things That Changed</h2>
+      <div class="two-col">
+        <div class="scene">
+          <svg viewBox="0 0 260 360"><g fill="none" stroke="#17324d" stroke-width="8" stroke-linecap="round"><circle cx="132" cy="88" r="46"/><circle cx="84" cy="192" r="24"/><circle cx="188" cy="190" r="24"/><path d="M56 306c36-42 112-42 148 0M60 66c18-28 48-42 78-42M158 28c36 4 64 26 78 58"/><path d="M104 92c20 18 44 18 64 0"/></g></svg>
+        </div>
+        <div class="scene">
+          <svg viewBox="0 0 260 360"><g fill="none" stroke="#17324d" stroke-width="8" stroke-linecap="round"><circle cx="132" cy="88" r="46"/><circle cx="84" cy="192" r="24"/><circle cx="188" cy="190" r="24"/><circle cx="216" cy="90" r="12"/><path d="M56 306c36-42 112-42 148 0M60 66c18-28 48-42 78-42M158 28c36 4 64 26 78 58"/><path d="M104 98c20 18 44 18 64 0"/></g></svg>
+        </div>
+      </div>
+      <p class="prompt">Circle what changed in the second picture.</p>
+    </section>
+
+    <section class="page">
+      <p class="eyebrow">Character Matching</p>
+      <h2>Match Each Friend to Their Superpower</h2>
+      <div class="match-grid">
+        <div class="match-card">Ollie</div><div class="match-card">Eight arms that help solve problems</div>
+        <div class="match-card">Stella</div><div class="match-card">Always sees the bright side</div>
+        <div class="match-card">Spike</div><div class="match-card">Faces fears even when scared</div>
+        <div class="match-card">Lily</div><div class="match-card">Helps everyone slow down and think</div>
+        <div class="match-card">Keke</div><div class="match-card">Teaches reef kindness and ocean care</div>
+        <div class="match-card">Rainbow Bubble</div><div class="match-card">Starts every adventure</div>
+      </div>
+      <p class="prompt">Draw lines to match each Sparkle Bay friend to their superpower.</p>
+    </section>
+
+    <section class="page">
+      <p class="eyebrow">Kindness Certificate</p>
+      <h2>Sparkle Bay Kindness Certificate</h2>
+      <div class="certificate">
+        <p class="eyebrow">This certificate is awarded to</p>
+        <div class="line"></div>
+        <h1>for showing a kind heart and a brave spirit.</h1>
+        <p class="subtitle">Like Ollie and his friends, you helped make the adventure brighter.</p>
+        <div class="line"></div>
+        <p><strong>Signed:</strong> Ollie the Octopus</p>
+      </div>
+    </section>
+  </body>
+</html>

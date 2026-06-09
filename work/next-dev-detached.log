@@ -1,0 +1,7 @@
+▲ Next.js 16.2.7 (Turbopack)
+- Local:         http://127.0.0.1:3000
+- Network:       http://127.0.0.1:3000
+✓ Ready in 456ms
+
+ GET / 200 in 1403ms (next.js: 1239ms, application-code: 164ms)
+ GET / 200 in 114ms (next.js: 3ms, application-code: 111ms)

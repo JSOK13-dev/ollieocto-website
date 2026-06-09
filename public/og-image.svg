@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Ollie the Octopus and the Great Bubble Chase</title>
+  <desc id="desc">Sparkle Bay ocean adventure brand image.</desc>
+  <defs>
+    <linearGradient id="sea" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#a7efd2"/>
+      <stop offset="48%" stop-color="#2ec4d6"/>
+      <stop offset="100%" stop-color="#b89cff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#fffaf0"/>
+  <circle cx="1010" cy="110" r="128" fill="#ffd166"/>
+  <rect x="48" y="48" width="1104" height="534" rx="44" fill="url(#sea)"/>
+  <path d="M48 452c130-72 226-56 342-20 150 48 254 72 420-12 116-58 214-56 342-2v164H48z" fill="#17324d" opacity=".16"/>
+  <g transform="translate(800 190)">
+    <path d="M-110 160c-82 40-136 88-154 166M110 160c82 40 136 88 154 166M-86 110c-96 10-154 38-194 94M86 110c96 10 154 38 194 94" fill="none" stroke="#17324d" stroke-linecap="round" stroke-width="18"/>
+    <path d="M-76 138c-76 38-116 76-132 138M76 138c76 38 116 76 132 138" fill="none" stroke="#1e7fab" stroke-linecap="round" stroke-width="24"/>
+    <ellipse cx="0" cy="86" rx="126" ry="106" fill="#f9fbff" stroke="#17324d" stroke-width="13"/>
+    <ellipse cx="-70" cy="-20" rx="44" ry="58" fill="#f47eb8" stroke="#17324d" stroke-width="12" transform="rotate(-12 -70 -20)"/>
+    <ellipse cx="70" cy="-20" rx="44" ry="58" fill="#f47eb8" stroke="#17324d" stroke-width="12" transform="rotate(12 70 -20)"/>
+    <circle cx="-86" cy="-24" r="16" fill="#111"/>
+    <circle cx="86" cy="-24" r="16" fill="#111"/>
+    <path d="M-32 78c22-26 46-26 68 0M-44 108c34 28 86 28 120 0" fill="none" stroke="#6b3fa0" stroke-linecap="round" stroke-width="10"/>
+    <path d="M-20 148c18 14 40 14 60 0" fill="none" stroke="#17324d" stroke-linecap="round" stroke-width="9"/>
+  </g>
+  <g transform="translate(112 128)">
+    <text x="0" y="0" fill="#ff7c70" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="900" letter-spacing="5">SPARKLE BAY ADVENTURE</text>
+    <text x="0" y="86" fill="#17324d" font-family="Arial, Helvetica, sans-serif" font-size="76" font-weight="900">Ollie the Octopus</text>
+    <text x="0" y="164" fill="#17324d" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="900">and the Great</text>
+    <text x="0" y="238" fill="#17324d" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="900">Bubble Chase</text>
+    <text x="0" y="314" fill="#31546f" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">Kind Hearts. Big Adventures.</text>
+  </g>
+  <circle cx="626" cy="122" r="44" fill="#fff" opacity=".65" stroke="#17324d" stroke-width="8"/>
+  <path d="M592 124c16-34 58-42 78-8M604 148c18-20 42-22 58-4" fill="none" stroke="#ff7c70" stroke-linecap="round" stroke-width="7"/>
+</svg>

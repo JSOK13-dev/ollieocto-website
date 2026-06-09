@@ -1,0 +1,7 @@
+.next
+node_modules
+.env*.local
+work/npm-cache
+out
+
+.vercel
