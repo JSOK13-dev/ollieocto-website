@@ -1,7 +1,8 @@
 .next
+work
 node_modules
+.env.local
 .env*.local
-work/npm-cache
 out
 
 .vercel
