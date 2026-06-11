@@ -167,11 +167,11 @@ export function ActivityPackSection() {
     <section className="deep-sea-band px-5 py-16 text-[#17324d]" id="free-pack">
       <BubbleField subtle />
       <div className="relative z-10 mx-auto grid max-w-7xl gap-8 md:grid-cols-[0.95fr_1.05fr] md:items-center">
-        <div>
+        <div className="rounded-[2rem] bg-white/92 p-5 shadow-xl shadow-[#17324d]/10 ring-1 ring-[#17324d]/8 md:p-7">
           <p className="text-sm font-black uppercase tracking-[0.18em] text-[#ff9f1c]">
             Free Parent & Teacher Resource
           </p>
-          <h2 className="mt-4 text-3xl font-black leading-tight md:text-5xl">
+          <h2 className="mt-4 text-3xl font-black leading-tight text-[#17324d] md:text-5xl">
             Free Ollie Ocean Adventure Activity Pack
           </h2>
           <p className="mt-4 max-w-2xl text-lg font-bold leading-8 text-[#31546f]">
