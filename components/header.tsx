@@ -1,18 +1,18 @@
 "use client";
 
-import { Menu, Shell, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { navItems } from "@/lib/site";
-import { ButtonLink } from "./button-link";
+import { artwork, primaryNavItems } from "@/lib/site";
 
 export function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-40 border-b border-[#17324d]/10 bg-[#fffaf0]/92 backdrop-blur-xl">
+    <header className="sticky top-0 z-40 border-b border-white/45 bg-[#fffaf0]/82 backdrop-blur-xl">
       <nav
         aria-label="Main navigation"
         className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3"
@@ -22,10 +22,17 @@ export function Header() {
           href="/"
           onClick={() => setOpen(false)}
         >
-          <span className="grid size-10 place-items-center rounded-full bg-[#2ec4d6] text-white shadow-md shadow-[#2ec4d6]/30">
-            <Shell aria-hidden="true" size={22} />
+          <span className="grid size-12 place-items-center overflow-hidden rounded-full bg-[#eafcff] shadow-md shadow-[#2ec4d6]/30 ring-2 ring-white">
+            <Image
+              alt=""
+              aria-hidden="true"
+              className="h-full w-full scale-125 object-contain"
+              height={96}
+              src={artwork.ollieCutout}
+              width={96}
+            />
           </span>
-          <span className="leading-tight">
+          <span className="font-brand leading-tight">
             Ollie
             <span className="block text-xs font-bold text-[#44617a]">
               the Octopus
@@ -34,28 +41,25 @@ export function Header() {
         </Link>
 
         <div className="hidden items-center gap-1 lg:flex">
-          {navItems.map((item) => {
-            const active = pathname === item.href;
+          {primaryNavItems.map((item) => {
+            const external = item.href.startsWith("http");
+            const active = !external && pathname === item.href;
             return (
               <Link
                 className={`rounded-full px-3 py-2 text-sm font-bold transition focus-visible:focus-ring ${
                   active
-                    ? "bg-[#17324d] text-white"
-                    : "text-[#31546f] hover:bg-white"
+                    ? "bg-[#17324d] text-white shadow-sm shadow-[#2ec4d6]/20"
+                    : "bg-white/55 text-[#31546f] shadow-sm shadow-[#2ec4d6]/8 hover:bg-white"
                 }`}
                 href={item.href}
-                key={item.href}
+                key={item.label}
+                style={{ color: active ? "#ffffff" : undefined }}
+                target={external ? "_blank" : undefined}
               >
-                {item.label}
+                <span className="relative z-10 whitespace-nowrap">{item.label}</span>
               </Link>
             );
           })}
-        </div>
-
-        <div className="hidden lg:block">
-          <ButtonLink href="/buy" variant="sun">
-            Buy Now
-          </ButtonLink>
         </div>
 
         <button
@@ -72,8 +76,9 @@ export function Header() {
       {open ? (
         <div className="border-t border-[#17324d]/10 bg-[#fffaf0] px-5 pb-5 lg:hidden">
           <div className="mx-auto grid max-w-7xl gap-2 pt-3">
-            {navItems.map((item) => {
-              const active = pathname === item.href;
+            {primaryNavItems.map((item) => {
+              const external = item.href.startsWith("http");
+              const active = !external && pathname === item.href;
               return (
                 <Link
                   className={`rounded-xl px-4 py-3 font-bold ${
@@ -82,10 +87,12 @@ export function Header() {
                       : "bg-white text-[#31546f]"
                   }`}
                   href={item.href}
-                  key={item.href}
+                  key={item.label}
                   onClick={() => setOpen(false)}
+                  style={{ color: active ? "#ffffff" : undefined }}
+                  target={external ? "_blank" : undefined}
                 >
-                  {item.label}
+                  <span className="relative z-10">{item.label}</span>
                 </Link>
               );
             })}

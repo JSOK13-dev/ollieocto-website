@@ -1,24 +1,26 @@
 import {
+  Award,
   BookOpen,
   Brain,
   FileText,
   HeartHandshake,
-  Mail,
   Map,
   Palette,
-  PlayCircle,
   ShieldCheck,
   Sparkles,
   Star,
   Users
 } from "lucide-react";
 
+export const amazonBookUrl =
+  "https://www.amazon.com/Ollie-Octopus-Great-Bubble-Chase/dp/B0GZCRKG4P";
+
 export const navItems = [
   { href: "/", label: "Home" },
   { href: "/about-ollie", label: "About Ollie" },
-  { href: "/characters", label: "Characters" },
+  { href: "/characters", label: "Meet Ollie" },
   { href: "/sparkle-bay", label: "Sparkle Bay" },
-  { href: "/buy", label: "Buy the Book" },
+  { href: amazonBookUrl, label: "Buy the Book" },
   { href: "/activity-pack", label: "Free Pack" },
   { href: "/resources", label: "Resources" },
   { href: "/youtube", label: "YouTube" },
@@ -28,124 +30,134 @@ export const navItems = [
   { href: "/contact", label: "Contact" }
 ];
 
+export const primaryNavItems = [
+  { href: "/#book", label: "Book" },
+  { href: "/characters", label: "Meet Ollie" },
+  { href: "/activity-pack", label: "Free Pack" },
+  { href: "/about-ollie", label: "About" },
+  { href: amazonBookUrl, label: "Buy Book" }
+];
+
+export const artwork = {
+  cover: "/artwork/cover.jpg",
+  sparkleBayOpening: "/artwork/sparkle-bay-opening.jpg",
+  rainbowBubble: "/artwork/rainbow-bubble.jpg",
+  rainbowBubbleCutout: "/artwork/rainbow-bubble-cutout.png",
+  coralChase: "/artwork/coral-chase.jpg",
+  kelpForest: "/artwork/kelp-forest.jpg",
+  ollieHelps: "/artwork/ollie-helps.jpg",
+  ollieCutout: "/artwork/ollie-cutout.png",
+  stellaCutout: "/artwork/stella-cutout.png",
+  finnCutout: "/artwork/finn-cutout.png",
+  zippyCutout: "/artwork/zippy-cutout.png",
+  coralCrabCutout: "/artwork/grumpy-gus-cutout.png",
+  grumpyGusCutout: "/artwork/grumpy-gus-lobster.jpg",
+  kekeCutout: "/artwork/keke-cutout.png",
+  friendsFree: "/artwork/friends-free.jpg"
+};
+
+export const videoAssets = {
+  firstShort: "/videos/ollie-first-short.mp4"
+};
+
 export const bookBenefits = [
   {
     icon: HeartHandshake,
-    title: "Gentle SEL",
-    text: "Kindness, courage, sharing, and naming big feelings in a preschool-friendly way."
+    title: "Friends help friends",
+    text: "Ollie's gentle rescue shows little readers how teamwork can untangle a tricky moment."
   },
   {
     icon: Users,
-    title: "Friendship First",
-    text: "A soft adventure arc that helps children see teamwork as brave and fun."
+    title: "Made for read-aloud time",
+    text: "Short, bright story moments are easy for preschoolers to follow and ask for again."
   },
   {
     icon: BookOpen,
-    title: "Read-Aloud Rhythm",
-    text: "Designed for cozy bedtime reading, classroom circles, and repeat requests."
+    title: "Wonder on every page",
+    text: "A bright bubble turns an ordinary day into a magical ocean chase."
   },
   {
     icon: Sparkles,
-    title: "Ocean Curiosity",
-    text: "Colorful sea life details invite questions, imagination, and early science talk."
+    title: "A kind ocean adventure",
+    text: "Sparkle Bay invites curiosity, courage, and warm conversations after storytime."
   }
 ];
 
-export const characters = [
+export const bookOneCharacters = [
   {
     name: "Ollie the Octopus",
-    role: "Main character",
-    palette: "blue",
+    role: "Main Character",
+    image: artwork.ollieCutout,
     trait: "Curious, kind, adventurous",
     superpower: "Eight arms that help solve problems",
     catchphrase: "Let's see where the adventure takes us!",
-    favoriteActivity: "Solving Sparkle Bay surprises with all eight arms",
-    funFact: "Ollie can turn almost any problem into a teamwork adventure.",
-    text: "A soft blue octopus with pink eyes, purple spots, and eight expressive arms. Ollie leads every adventure with kindness and curiosity."
+    text: "The heart of Sparkle Bay, Ollie is always ready to discover something new and help along the way."
   },
+];
+
+export const futureCharacters = [
   {
     name: "Stella Starfish",
-    role: "Best friend",
-    palette: "yellow",
+    role: "Best Friend",
+    image: artwork.stellaCutout,
     trait: "Optimistic and encouraging",
     superpower: "Always sees the bright side",
     catchphrase: "There's always a way to shine!",
-    favoriteActivity: "Finding the sunny side of tricky moments",
-    funFact: "Stella is the first friend to cheer when someone tries again.",
-    text: "A sunny starfish who brings warmth, encouragement, and cozy storytime energy."
+    text: "Stella brings sparkle, cheer, and a bright point of view to every ocean adventure."
   },
   {
-    name: "Spike the Pufferfish",
-    role: "Courage character",
-    palette: "green",
+    name: "Finn the Pufferfish",
+    role: "Courage Character",
+    image: artwork.finnCutout,
     trait: "Nervous but brave",
     superpower: "Faces fears even when scared",
     catchphrase: "I can do hard things!",
-    favoriteActivity: "Practicing brave little steps",
-    funFact: "Spike may puff up when nervous, but he still shows up.",
-    text: "A green-and-purple pufferfish who helps children talk about nerves, confidence, and trying again."
+    text: "Finn reminds young readers that being brave can start with one small try."
   },
   {
     name: "Zippy the Seahorse",
-    role: "Explorer and messenger",
-    palette: "red",
+    role: "Explorer & Messenger",
+    image: artwork.zippyCutout,
     trait: "Fast, energetic, excited",
     superpower: "Speed and quick thinking",
     catchphrase: "Last one there is a jellyfish!",
-    favoriteActivity: "Racing messages through Seahorse Speedway",
-    funFact: "Zippy knows the fastest path to every corner of Sparkle Bay.",
-    text: "A red-and-white seahorse who turns small moments into fast, funny adventures and quick discoveries."
+    text: "Zippy zips through Sparkle Bay with big energy and quick ideas."
+  },
+  {
+    name: "Coral the Crab",
+    role: "Sparkle Bay Friend",
+    image: artwork.coralCrabCutout,
+    trait: "Cheerful, playful, energetic",
+    superpower: "Brings a bright smile to every adventure",
+    catchphrase: "Let's make a splash!",
+    text: "Coral scuttles into Sparkle Bay with big energy, a bright smile, and plenty of playful ocean fun."
   },
   {
     name: "Grumpy Gus the Lobster",
-    role: "Comic relief",
-    palette: "gold",
+    role: "Comic Relief",
+    image: artwork.grumpyGusCutout,
     trait: "Complains at first but has a big heart",
     superpower: "Always shows up when friends need help",
     catchphrase: "I don't like adventures... but I'll help anyway.",
-    favoriteActivity: "Pretending not to enjoy group missions",
-    funFact: "Gus grumbles loudly, then quietly does the kind thing.",
-    text: "A bright lobster friend whose grumbles make kids laugh before his kind heart saves the day."
-  },
-  {
-    name: "Lily the Sea Turtle",
-    role: "Wise friend",
-    palette: "seafoam",
-    trait: "Calm, patient, thoughtful",
-    superpower: "Helps everyone slow down and think",
-    catchphrase: "Slow and steady helps us see the way.",
-    favoriteActivity: "Guiding friends through calm choices at Turtle Cove",
-    funFact: "Lily notices small clues everyone else swims past.",
-    text: "A gentle sea turtle who helps the crew pause, notice, and make thoughtful choices."
+    text: "Gus may grumble, but his caring heart always finds its way to the surface."
   },
   {
     name: "Keke the Endangered Elkhorn Coral",
-    role: "Environmental hero",
-    palette: "coral",
+    role: "Environmental Hero",
+    image: artwork.kekeCutout,
     trait: "Caring, protective",
     superpower: "Teaches ocean conservation naturally",
     catchphrase: "Every reef needs a friend.",
-    favoriteActivity: "Protecting Friendship Reef and welcoming tiny sea creatures",
-    funFact: "Elkhorn coral creates shelter where young fish can grow safely.",
-    text: "A caring coral character who introduces reef protection, ocean kindness, and conservation themes in a child-friendly way."
-  },
-  {
-    name: "The Rainbow Bubble",
-    role: "Adventure starter",
-    palette: "rainbow",
-    trait: "Magical mystery",
-    superpower: "Begins each episode and points the crew toward the day's adventure",
-    catchphrase: "Look! The Rainbow Bubble!",
-    favoriteActivity: "Floating into Sparkle Bay with a new mystery",
-    funFact: "The Rainbow Bubble never appears in exactly the same way twice.",
-    text: "The recurring signal that launches every story, giving the series a familiar ritual children can anticipate and repeat."
+    text: "Keke helps children see how caring for the reef can feel natural and kind."
   }
 ];
+
+export const characters = [...bookOneCharacters, ...futureCharacters];
 
 export const brandMessage = {
   setting: "Sparkle Bay",
   core: "Kind Hearts. Big Adventures.",
-  tagline: "Every Adventure Begins with a Bubble.",
+  tagline: "Every adventure begins with a bubble.",
   leadMagnet: "Free Ollie Ocean Adventure Activity Pack"
 };
 
@@ -155,20 +167,19 @@ export const bookInfo = {
   pages: 24,
   copyrightYear: 2026,
   description:
-    "One bright sunny morning in Sparkle Bay, Ollie and Stella spot a giant rainbow bubble floating past Ollie's door. The chase brings more friends along, carries them through coral and into the Kelp Forest, and shows how teamwork can turn a tangled moment into a joyful adventure.",
+    "Meet Ollie, a curious little octopus who follows a mysterious bubble through an unforgettable ocean adventure about friendship, curiosity, and courage.",
   themes: [
     "Friendship",
     "Teamwork",
-    "Problem-solving",
-    "Gentle courage",
+    "Helping friends",
+    "Curiosity",
     "Ocean adventure"
   ]
 };
 
 export const testimonials = [
   {
-    quote:
-      "Coming Soon: Reviews from parents, teachers, and early readers.",
+    quote: "Coming Soon: Reviews from parents, teachers, and early readers.",
     name: "Reviews coming soon"
   }
 ];
@@ -177,125 +188,111 @@ export const resourceCards = [
   {
     icon: Star,
     title: "Printable Coloring Pages",
-    text: "Ollie, Stella, Spike, Keke, and Sparkle Bay scenes for creativity and calm focus."
+    text: "Color Ollie, ocean scenes, bubbles, coral, and cheerful Sparkle Bay moments."
   },
   {
     icon: ShieldCheck,
-    title: "SEL Activity Sheets",
-    text: "Feelings, courage, kindness, teamwork, and friendship prompts for ages 3-5."
+    title: "Kindness Activity Sheets",
+    text: "Simple prompts about helping, trying again, and noticing when friends need care."
   },
   {
     icon: FileText,
-    title: "Lesson Plans",
-    text: "Circle-time ideas, read-aloud pause points, vocabulary, and discussion questions."
+    title: "Read-Aloud Questions",
+    text: "Gentle pause points for parents, teachers, libraries, and preschool storytime."
   },
   {
     icon: Brain,
     title: "Ocean Facts Sheets",
-    text: "Preschool-friendly sea animal and reef conservation facts tied to the characters."
+    text: "Preschool-friendly notes about octopuses, ocean habitats, coral, bubbles, and kelp."
   }
 ];
 
 export const activityPackItems = [
-  "Coloring pages",
-  "Spot the difference",
+  "Ollie coloring page",
+  "Bubble coloring page",
   "Ocean maze",
-  "Character introduction pages",
-  "Printable certificate"
+  "Kindness certificate"
 ];
 
 export const sparkleBayLocations = [
   {
-    name: "Ollie's Clam House",
-    position: "left-[12%] top-[52%]",
-    text: "Ollie's cozy home base where friends gather before each adventure."
+    name: "Sparkle Bay",
+    image: artwork.sparkleBayOpening,
+    text: "The sunny underwater world where Ollie wakes up and the Great Bubble Chase begins."
   },
   {
-    name: "Coral Garden",
-    position: "left-[24%] top-[25%]",
-    text: "Keke's colorful reef garden for ocean care and conservation lessons."
+    name: "Coral Areas",
+    image: artwork.coralChase,
+    text: "Bright coral fills the chase with color as Ollie and his friends follow the shiny bubble."
   },
   {
     name: "Kelp Forest",
-    position: "left-[44%] top-[18%]",
-    text: "A tall swaying maze for hide-and-seek, clues, and courage moments."
-  },
-  {
-    name: "Rainbow Bubble Lagoon",
-    position: "left-[58%] top-[48%]",
-    text: "The magical place where every adventure begins with a bubble."
-  },
-  {
-    name: "Turtle Cove",
-    position: "left-[76%] top-[28%]",
-    text: "Lily's calm cove for slowing down, thinking, and choosing wisely."
-  },
-  {
-    name: "Seahorse Speedway",
-    position: "left-[72%] top-[70%]",
-    text: "Zippy's fast lane for messages, races, and quick-thinking rescues."
-  },
-  {
-    name: "Friendship Reef",
-    position: "left-[37%] top-[70%]",
-    text: "A bright reef where the whole crew practices kindness and teamwork."
+    image: artwork.kelpForest,
+    text: "The tall green kelp creates the story's tricky moment before Ollie helps everyone get free."
   }
+];
+
+export const futureAdventureIdeas = [
+  "More Sparkle Bay friends",
+  "New bubbly surprises",
+  "Gentle ocean discoveries",
+  "More kindness adventures"
 ];
 
 export const merchWaitlistItems = [
   {
     title: "Ollie Plush Toy",
-    text: "Soft, huggable Ollie for bedtime stories and classroom calm corners."
+    text: "A soft Ollie friend for bedtime reading and cozy storytime."
   },
   {
     title: "Sparkle Bay Sticker Pack",
-    text: "Ollie, Stella, Spike, Zippy, Gus, Lily, Keke, and Rainbow Bubble stickers."
+    text: "Ollie, bubbles, coral, and cheerful ocean friends."
   },
   {
-    title: "Ollie Coloring Book",
-    text: "A full activity book with coloring pages, mazes, certificates, and character prompts."
+    title: "Ollie Activity Book",
+    text: "Coloring pages, mazes, certificates, and story-inspired activities."
   }
 ];
 
 export const youtubePlaylists = [
   "Story Time with Ollie",
+  "Sparkle Bay Shorts",
   "Ocean Facts",
   "Kindness Adventures",
-  "Courage with Spike",
-  "Sparkle Bay Adventures"
+  "Sparkle Bay Stories"
 ];
 
 export const latestVideos = [
-  "Look! The Rainbow Bubble Appears",
-  "Ollie and Spike Try Something Brave",
-  "Keke's Reef Needs a Friend"
+  "Meet Ollie the Octopus",
+  "The Great Bubble Chase",
+  "What is Sparkle Bay?"
 ];
 
 export const faqItems = [
   {
     question: "What age is Ollie the Octopus for?",
     answer:
-      "Ollie is designed for ages 3-5, with stories and activities that also work for preschool classrooms, libraries, and cozy family read-aloud time."
+      "Ollie is designed for ages 3-5, with a gentle story that works for bedtime, preschool classrooms, libraries, and family read-aloud time."
   },
   {
     question: "What is Sparkle Bay?",
     answer:
-      "Sparkle Bay is Ollie's ocean world, where every adventure begins with the Rainbow Bubble and leads to kindness, courage, friendship, or ocean learning."
+      "Sparkle Bay is Ollie's bright underwater home, filled with colorful sea friends, gentle adventures, and ocean curiosity."
   },
   {
-    question: "Is Ollie educational?",
+    question: "Who appears in the first book?",
     answer:
-      "Yes. The brand gently supports social-emotional learning, read-aloud routines, ocean animal curiosity, and early conservation themes."
+      "Ollie the Octopus leads the first book, with more Sparkle Bay friends appearing as the world grows."
   },
   {
-    question: "Who are the main characters?",
+    question: "What does the story teach?",
     answer:
-      "The core cast includes Ollie, Stella Starfish, Spike the Pufferfish, Zippy the Seahorse, Grumpy Gus the Lobster, Lily the Sea Turtle, Keke the Endangered Elkhorn Coral, and the Rainbow Bubble."
+      "The story gently shows friendship, teamwork, curiosity, and helping friends when they get into a tricky spot."
   },
   {
     question: "Can teachers use the free resources?",
     answer:
-      "Yes. The activity pack and parent/teacher resources are intended for homes, preschool classrooms, libraries, and storytime programs."
+      "Yes. The activity pack and parent resources are intended for homes, preschool classrooms, libraries, and storytime programs."
   }
 ];
 
@@ -311,67 +308,78 @@ export const blogPosts = [
     slug: "ocean-animals-kids-love",
     title: "Ocean Animals Kids Love",
     excerpt:
-      "A preschool-friendly guide to octopuses, sea turtles, starfish, pufferfish, seahorses, lobsters, and coral reefs.",
+      "A preschool-friendly guide to octopuses, ocean habitats, coral, bubbles, and kelp forests.",
     category: "Ocean Learning"
   },
   {
     slug: "teaching-kindness-through-stories",
     title: "Teaching Kindness Through Stories",
     excerpt:
-      "Why character-led picture books help children practice empathy, sharing, repair, and friendship language.",
+      "Why picture books help children practice empathy, sharing, repair, and friendship language.",
     category: "Kindness"
   },
   {
     slug: "preschool-social-emotional-learning-activities",
     title: "Preschool Social Emotional Learning Activities",
     excerpt:
-      "Simple SEL activities for courage, patience, teamwork, and naming big feelings after storytime.",
+      "Simple activities for friendship, helping, teamwork, and naming big feelings after storytime.",
     category: "SEL"
   }
 ];
 
 export const shortsIdeas = [
-  "Look! The Rainbow Bubble appears over Sparkle Bay",
-  "The 2-second kindness challenge with Ollie",
-  "Spike says: I can do hard things",
-  "Zippy races to deliver an important message",
-  "Can Ollie share his favorite pebble?",
-  "Ocean feelings: bubbly, stormy, sleepy",
-  "Ollie's courage countdown",
-  "Three sea animal facts in 20 seconds",
-  "Grumpy Gus complains, then helps anyway",
-  "Ollie's bedtime bubble breath",
-  "Lily helps everyone slow down",
-  "Guess the sea animal silhouette",
-  "Stella finds a way to shine",
-  "The kelp forest hide-and-seek hook",
-  "One brave thing before bedtime",
-  "Ollie makes room in the circle",
-  "A coral reef color hunt",
-  "Keke explains why reefs need friends",
-  "Ollie says sorry",
-  "What would you do? Share or grab?",
-  "Ocean cleanup mini mission",
-  "The sleepy whale lullaby moment",
-  "A joke from Grumpy Gus",
-  "Counting Ollie's eight helping arms",
-  "Fast fact: why octopuses change color",
-  "Ollie's brave voice practice",
-  "A friend feels left out",
-  "The treasure map with no treasure",
-  "Kindness catchphrase of the day",
-  "A 15-second read-aloud cliffhanger"
+  "A bubbly surprise appears",
+  "Meet Ollie and his eight helping arms",
+  "Ollie notices something bright",
+  "Ollie tries one brave thing",
+  "The Great Bubble Chase begins",
+  "Can you spot the bright bubble?",
+  "A swim through coral",
+  "Uh-oh, the Kelp Forest!",
+  "Ollie helps his friends get free",
+  "Friends help friends in Sparkle Bay",
+  "Count Ollie's eight arms",
+  "What color is the bubble?",
+  "A tiny kindness challenge",
+  "Guess the sea animal",
+  "Bedtime bubble breath",
+  "Ollie's favorite helping moment",
+  "Ollie's kind choice",
+  "Ollie says: I can do hard things",
+  "A coral color hunt",
+  "Kelp Forest peekaboo",
+  "A bright bubble floats by",
+  "Ollie says: Let's catch it!",
+  "A gentle ocean fact",
+  "Storytime in Sparkle Bay",
+  "The friends are free",
+  "With friends by your side",
+  "Draw a bright bubble",
+  "Ollie's book is here",
+  "Free activity pack preview",
+  "More Sparkle Bay fun"
 ];
 
 export const longFormIdeas = [
-  "Ollie the Octopus full read-aloud with gentle ocean sounds",
-  "Look! The Rainbow Bubble: Ollie's Kindness Adventure episode 1",
-  "Learn ocean animals with Ollie: octopus, crab, turtle, whale",
-  "Bedtime in Sparkle Bay calm storytime",
-  "Friendship problem-solving with Ollie, Stella, and Spike",
-  "Draw and color Ollie with simple shapes",
-  "Ollie's courage story plus breathing exercise",
-  "Keke's reef rescue: ocean conservation for preschool kids",
-  "Teacher circle-time read-aloud and discussion prompts",
-  "Ollie's five favorite ways to be a helper"
+  "Meet Ollie the Octopus",
+  "The Great Bubble Chase storytime preview",
+  "Meet Ollie's Ocean World",
+  "What is Sparkle Bay?",
+  "Draw and color a bright bubble",
+  "Ollie's Kelp Forest kindness lesson",
+  "Ocean animals from the book",
+  "Bedtime in Sparkle Bay",
+  "Free activity pack walkthrough",
+  "More Sparkle Bay fun for families"
 ];
+
+export const authorInfo = {
+  name: "Joshua Sokolow",
+  text:
+    "Born and raised in South Florida, Joshua Sokolow spent countless hours exploring the ocean, fishing, boating, and walking the beach. His lifelong love of marine life, conservation, and the natural beauty of the sea inspired Ollie the Octopus and the Great Bubble Chase.",
+  details:
+    "A lifelong artist, serial entrepreneur, and former tax attorney with a Master of Science in Accounting, Joshua has always loved turning ideas into reality. Through Ollie and Sparkle Bay, he brings together creativity, storytelling, and ocean conservation to inspire curiosity, kindness, friendship, and love for the underwater world.",
+  closing:
+    "Joshua lives in South Florida with his wife and their two dogs. He hopes Ollie's adventures encourage young readers to explore, imagine, and discover that every great adventure begins with a little curiosity and a little kindness.",
+  icon: Award
+};

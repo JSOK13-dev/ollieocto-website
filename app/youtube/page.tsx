@@ -8,13 +8,14 @@ import {
   latestVideos,
   longFormIdeas,
   shortsIdeas,
+  videoAssets,
   youtubePlaylists
 } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "YouTube Videos and Growth Plan",
+  title: "Ollie Videos",
   description:
-    "A made-for-kids YouTube content plan for Ollie the Octopus, including Shorts ideas, long-form ideas, thumbnail guidance, SEO tags, and safe growth tactics."
+    "Ollie the Octopus videos, storytime moments, bubbly shorts, and gentle ocean fun for families."
 };
 
 const titleFormulas = [
@@ -47,9 +48,9 @@ export default function YouTubePage() {
         <div className="mx-auto max-w-7xl">
           <SectionHeading
             centered
-            eyebrow="YouTube growth hub"
-            title="Subscribe for Sparkle Bay stories, Shorts, and ocean learning"
-            text="Ollie remains the main character, while recurring friends create familiar episode roles. Use ethical high-retention principles: quick hooks, emotional payoff, clear packaging, repeated structure, and consistent character moments."
+            eyebrow="Ollie Videos"
+            title="More Sparkle Bay Fun"
+            text="Join Ollie for gentle storytime videos, ocean facts, and preschool-friendly Sparkle Bay adventures."
           />
           <div className="mt-8 flex justify-center">
             <ButtonLink
@@ -66,6 +67,19 @@ export default function YouTubePage() {
           <section className="rounded-2xl bg-[#17324d] p-5 text-white shadow-xl shadow-[#17324d]/18">
             <h2 className="text-2xl font-black">Latest videos</h2>
             <div className="mt-4 grid gap-3">
+              <div className="rounded-xl bg-white/10 p-3" key="ollie-short">
+                <video
+                  aria-label="Ollie the Octopus short video"
+                  className="aspect-video w-full rounded-lg bg-[#10283e] object-cover"
+                  controls
+                  playsInline
+                  preload="metadata"
+                  src={videoAssets.firstShort}
+                />
+                <p className="mt-3 text-center font-black">
+                  Ollie the Octopus Short
+                </p>
+              </div>
               {latestVideos.map((video) => (
                 <div
                   className="grid aspect-video place-items-center rounded-xl bg-gradient-to-br from-[#2ec4d6] via-[#a7efd2] to-[#ffd166] p-5 text-center text-[#17324d]"
@@ -102,6 +116,19 @@ export default function YouTubePage() {
             Shorts carousel
           </h2>
           <div className="mt-4 flex max-w-full gap-4 overflow-x-auto pb-3">
+            <article className="w-36 shrink-0 rounded-2xl bg-[#17324d] p-2 shadow-md sm:w-44">
+              <video
+                aria-label="Ollie the Octopus short video preview"
+                className="aspect-[9/16] w-full rounded-xl bg-[#10283e] object-cover"
+                controls
+                playsInline
+                preload="metadata"
+                src={videoAssets.firstShort}
+              />
+              <h3 className="px-2 py-3 text-base font-black leading-tight text-white sm:text-lg">
+                Ollie&apos;s first short
+              </h3>
+            </article>
             {shortsIdeas.slice(0, 10).map((short) => (
               <article
                 className="grid aspect-[9/16] w-36 shrink-0 place-items-end rounded-2xl bg-gradient-to-br from-[#ff7c70] via-[#ffd166] to-[#2ec4d6] p-4 shadow-md sm:w-44"
@@ -119,18 +146,18 @@ export default function YouTubePage() {
           {[
             {
               icon: Sparkles,
-              title: "Channel names",
-              text: "Ollie the Octopus, Ollie's Ocean Adventures, Storytime with Ollie, Sparkle Bay Kids."
+              title: "Storytime with Ollie",
+              text: "Gentle read-aloud moments and cozy Sparkle Bay scenes for families."
             },
             {
               icon: Film,
-              title: "Channel description",
-              text: "Warm ocean stories, read-alouds, gentle SEL, sea animal facts, and Rainbow Bubble adventures for ages 3-5."
+              title: "Bubbly Shorts",
+              text: "Quick, bright moments where a bubble starts a tiny adventure."
             },
             {
               icon: ShieldCheck,
-              title: "Banner copy",
-              text: "Look! The Rainbow Bubble! Ocean stories for kind hearts. New Shorts weekly. Parent-friendly adventures for preschoolers."
+              title: "Parent-friendly videos",
+              text: "Warm, safe, preschool-friendly ocean stories for ages 3-5."
             }
           ].map((item) => {
             const Icon = item.icon;
@@ -157,7 +184,7 @@ export default function YouTubePage() {
         </div>
 
         <div className="mt-12 grid gap-4 md:grid-cols-2">
-          <StrategyCard
+          <VideoInfoCard
             icon={<Sparkles aria-hidden="true" />}
             title="Thumbnail Style Guide"
             items={[
@@ -167,7 +194,7 @@ export default function YouTubePage() {
               "Keep screenshots simple enough to read on a parent's phone."
             ]}
           />
-          <StrategyCard
+          <VideoInfoCard
             icon={<Clock aria-hidden="true" />}
             title="Upload Schedule"
             items={[
@@ -177,20 +204,20 @@ export default function YouTubePage() {
               "Repurpose every long-form episode into 3-5 Shorts."
             ]}
           />
-          <StrategyCard
+          <VideoInfoCard
             icon={<Hash aria-hidden="true" />}
             title="Title Formulas and SEO Tags"
             items={[...titleFormulas, ...tags]}
           />
-          <StrategyCard
+          <VideoInfoCard
             icon={<BarChart3 aria-hidden="true" />}
-            title="Growth and Retention System"
+            title="Story Shape"
             items={[
-              "Open every Short with a 1-2 second hook: a question, surprise, or emotional problem.",
-              "Use a familiar structure: Rainbow Bubble trigger, tiny problem, attempt, kind choice, payoff, parent subscribe prompt.",
-              "Give Ollie repeatable catchphrases like 'Eight arms, one kind heart!'",
-              "Create playlists by kindness, courage, bedtime, ocean facts, and read-alouds.",
-              "Manually A/B-test titles and thumbnails; track retention, CTR, rewatches, and subscriber conversion."
+              "Begin with one bright, simple moment.",
+              "Give Ollie and his friends one simple problem to solve.",
+              "Keep the story warm, bright, and easy for preschoolers to follow.",
+              "End with a kind choice or a helpful friend moment.",
+              "Invite parents to keep reading, watching, or printing activities."
             ]}
           />
         </div>
@@ -237,7 +264,7 @@ function ContentList({ title, items }: { title: string; items: string[] }) {
   );
 }
 
-function StrategyCard({
+function VideoInfoCard({
   icon,
   title,
   items

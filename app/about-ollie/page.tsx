@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Heart, Sparkles, Waves } from "lucide-react";
 import { BookCover } from "@/components/book-cover";
-import { CharacterGrid } from "@/components/character-card";
 import { SectionHeading } from "@/components/section-heading";
+import { artwork } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About Ollie",
@@ -19,24 +20,24 @@ export default function AboutOlliePage() {
           <SectionHeading
             eyebrow="Meet Ollie"
             title="A curious octopus with eight helping arms"
-            text="Ollie loves shiny shells, hide-and-seek in the kelp forest, and making new friends feel welcome. His adventures help young readers practice empathy, courage, and teamwork without feeling like a lesson."
+            text="Ollie is a curious little octopus who loves bright surprises, kind choices, and bubbly ocean adventures."
           />
           <div className="mt-8 grid gap-4">
             {[
               {
                 icon: Heart,
                 title: "Kind",
-                text: "Ollie notices when a friend feels left out and finds a gentle way to help."
+                text: "When everyone gets stuck in the Kelp Forest, Ollie gently helps his friends get free."
               },
               {
                 icon: Sparkles,
-                title: "Brave",
-                text: "He learns that brave can mean asking, trying, apologizing, or taking one small step."
+                title: "Curious",
+                text: "A mysterious bubble catches Ollie's eye and turns an ordinary moment into an adventure."
               },
               {
                 icon: Waves,
-                title: "Wonder-filled",
-                text: "Every story invites preschoolers into sea animals, colors, counting, and ocean facts."
+                title: "Helpful",
+                text: "Ollie's eight arms are perfect for solving problems with care."
               }
             ].map((item) => {
               const Icon = item.icon;
@@ -61,14 +62,19 @@ export default function AboutOlliePage() {
         </div>
       </div>
       <div className="mx-auto mt-16 max-w-7xl">
-        <SectionHeading
-          centered
-          eyebrow="Recurring friends"
-          title="The world around Ollie"
-          text="Use these characters across books, printable activities, and videos so children quickly recognize the emotional role each friend plays. The Rainbow Bubble becomes the familiar story starter for the whole universe."
-        />
-        <div className="mt-10">
-          <CharacterGrid />
+        <div className="grid gap-8 rounded-[2rem] bg-white p-5 shadow-lg shadow-[#17324d]/7 ring-1 ring-[#17324d]/7 md:grid-cols-2 md:items-center">
+          <Image
+            alt="Ollie in a bright Sparkle Bay ocean scene"
+            className="aspect-square w-full rounded-[1.5rem] bg-[#eafcff] object-contain p-4"
+            height={900}
+            src={artwork.ollieCutout}
+            width={900}
+          />
+          <SectionHeading
+            eyebrow="Book 1"
+            title="The Great Bubble Chase"
+            text="Ollie's first story follows one magical bubble, one tangled forest, and one warm lesson: friends help friends."
+          />
         </div>
       </div>
     </section>

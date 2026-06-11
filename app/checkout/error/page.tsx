@@ -13,8 +13,8 @@ export default function CheckoutErrorPage() {
         Checkout needs attention.
       </h1>
       <p className="mt-4 text-lg leading-8 text-[#44617a]">
-        This page catches payment or session errors. Add logging and customer
-        support instructions before launch.
+        Something went wrong while opening checkout. Please try again or
+        contact us for help bringing Ollie home.
       </p>
       <Link
         className="mt-8 inline-flex rounded-full bg-[#17324d] px-6 py-3 font-black text-white shadow-lg shadow-[#17324d]/18"

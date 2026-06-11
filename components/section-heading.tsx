@@ -14,7 +14,7 @@ export function SectionHeading({
   return (
     <div className={centered ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}>
       {eyebrow ? (
-        <p className="text-sm font-black uppercase tracking-[0.18em] text-[#ff7c70]">
+        <p className={`storybook-eyebrow ${centered ? "mx-auto" : ""}`}>
           {eyebrow}
         </p>
       ) : null}

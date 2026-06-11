@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Award, Eye, Map, Palette, ScrollText } from "lucide-react";
+import { Award, Eye, Map, Palette, ScrollText, Star } from "lucide-react";
 import { EmailSignup } from "@/components/email-signup";
 import { SectionHeading } from "@/components/section-heading";
 import { activityPackItems, brandMessage } from "@/lib/site";
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     "Get free Ollie the Octopus coloring pages, spot the difference, ocean maze, character pages, and printable certificate."
 };
 
-const icons = [Palette, Eye, Map, ScrollText, Award];
+const icons = [Palette, Eye, Map, ScrollText, Star, Award];
 
 export default function ActivityPackPage() {
   return (

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CheckCircle2 } from "lucide-react";
+import { amazonBookUrl } from "@/lib/site";
 
 export default function WelcomePage() {
   return (
@@ -12,9 +13,8 @@ export default function WelcomePage() {
         Your Ollie Ocean Adventure Activity Pack is on the way.
       </h1>
       <p className="mt-4 text-lg leading-8 text-[#44617a]">
-        Connect the form to MailerLite before launch so this page follows a
-        real signup. For now, it confirms the funnel and gives families a next
-        step.
+        Check your inbox soon for coloring pages, an ocean maze, character
+        activities, and a kindness certificate from Sparkle Bay.
       </p>
       <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
         <Link
@@ -25,9 +25,10 @@ export default function WelcomePage() {
         </Link>
         <Link
           className="rounded-full bg-[#17324d] px-6 py-3 font-black text-white"
-          href="/buy"
+          href={amazonBookUrl}
+          target="_blank"
         >
-          Buy the Book
+          Buy on Amazon
         </Link>
       </div>
     </section>

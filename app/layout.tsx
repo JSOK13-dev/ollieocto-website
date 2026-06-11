@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import { AnalyticsPlaceholders } from "@/components/analytics";
-import { ConversionLayer } from "@/components/conversion-layer";
+import { AnalyticsScripts } from "@/components/analytics";
+import { SignupLayer } from "@/components/signup-layer";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { SchemaMarkup } from "@/components/schema-markup";
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | Ollie the Octopus"
   },
   description:
-    `${bookInfo.title} is a warm, colorful Sparkle Bay picture book about a Rainbow Bubble chase, friendship, teamwork, and gentle problem-solving for ages 3-5.`,
+    `${bookInfo.title} is a bright, bubbly ocean adventure about friendship, curiosity, and courage for young readers.`,
   keywords: [
     "Ollie the Octopus",
     "octopus children's book",
@@ -31,14 +31,13 @@ export const metadata: Metadata = {
     "bedtime story ages 3-5",
     "preschool ocean book",
     "friendship picture book",
-    "social emotional learning children's book",
+    "friendship children's book",
     "Sparkle Bay",
-    "children's character brand",
     "free ocean activity pack",
     "kindness stories for preschool"
   ],
   openGraph: {
-    title: "Ollie the Octopus",
+    title: bookInfo.title,
     description: bookInfo.description,
     url: siteUrl,
     siteName: "Ollie the Octopus",
@@ -48,9 +47,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ollie the Octopus",
+    title: bookInfo.title,
     description:
-      "Ocean adventures, friendship, courage, and gentle SEL for ages 3-5."
+      "A bright, bubbly ocean adventure about friendship, curiosity, and courage for young readers."
   },
   alternates: {
     canonical: "/"
@@ -65,7 +64,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="pb-16 md:pb-0">
-        <AnalyticsPlaceholders />
+        <AnalyticsScripts />
         <SchemaMarkup />
         <a
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-white focus:px-4 focus:py-3 focus:shadow-lg focus:outline-none focus:ring-4 focus:ring-[#2ec4d6]/40"
@@ -76,7 +75,7 @@ export default function RootLayout({
         <Header />
         <main id="main">{children}</main>
         <Footer />
-        <ConversionLayer />
+        <SignupLayer />
       </body>
     </html>
   );

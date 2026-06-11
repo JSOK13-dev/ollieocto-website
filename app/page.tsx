@@ -1,23 +1,21 @@
 import {
-  Benefits,
-  CharacterPreview,
-  Hero,
-  SignupBand,
-  StoryPreview,
-  Testimonials,
-  VideoPreview
+  ActivityPackSection,
+  BookSection,
+  BrandClosingSection,
+  CharactersSection,
+  HomeHero,
+  ReviewsSection
 } from "@/components/home-sections";
 
 export default function HomePage() {
   return (
     <>
-      <Hero />
-      <Benefits />
-      <CharacterPreview />
-      <StoryPreview />
-      <Testimonials />
-      <SignupBand />
-      <VideoPreview />
+      <HomeHero />
+      <BookSection />
+      <CharactersSection />
+      <ActivityPackSection />
+      <ReviewsSection />
+      <BrandClosingSection />
     </>
   );
 }

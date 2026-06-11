@@ -35,18 +35,17 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         <p className="mt-5 text-lg leading-8 text-[#44617a]">{post.excerpt}</p>
         <div className="mt-8 space-y-6 leading-8 text-[#31546f]">
           <p>
-            This starter draft is ready to expand with your voice, examples from
-            Ollie&apos;s world, and links to the book, YouTube videos, and free
-            activity pack.
+            Ollie&apos;s world gives families a gentle way to talk about
+            friendship, curiosity, helping, and the small brave choices children
+            practice every day.
           </p>
           <p>
-            Use a simple structure: parent-friendly opening, practical benefit,
-            short activity idea, character tie-in, and a gentle call to action.
+            Try pairing the idea with a cozy read-aloud moment, a simple
+            question, and one printable activity from Sparkle Bay.
           </p>
           <p>
-            Sparkle Bay can make each article feel branded by tying the topic to
-            Ollie, Stella, Spike, Zippy, Grumpy Gus, Lily, Keke, or the Rainbow
-            Bubble.
+            Ollie and the world of Sparkle Bay can help little readers
+            remember that friends help friends.
           </p>
         </div>
       </article>

@@ -15,7 +15,7 @@ export default function ContactPage() {
         <SectionHeading
           eyebrow="Contact"
           title="Questions, school visits, partnerships, and press"
-          text="Use this page as the brand grows. Connect the form to your email service or form backend before launch."
+          text="Reach out about Ollie, author visits, school or library storytime, partnerships, or media questions."
         />
         <form className="grid gap-4 rounded-2xl bg-white p-5 shadow-xl shadow-[#17324d]/8 ring-1 ring-[#17324d]/8">
           <label className="grid gap-2 font-bold text-[#17324d]">

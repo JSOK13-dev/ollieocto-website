@@ -19,7 +19,7 @@ export default function ResourcesPage() {
             centered
             eyebrow="Parent and teacher resources"
             title="Lesson plans, SEL sheets, coloring pages, and ocean facts"
-            text="Build the Sparkle Bay brand into something parents, teachers, librarians, and preschool programs can use again and again."
+            text="Printable activities and read-aloud ideas inspired by Ollie, colorful ocean scenes, coral, bubbles, and Sparkle Bay."
           />
           <div className="mx-auto mt-8 max-w-3xl">
             <EmailSignup source="resources-page" />
@@ -44,14 +44,14 @@ export default function ResourcesPage() {
             })}
           </div>
           <section className="mt-12 rounded-2xl bg-[#17324d] p-6 text-white shadow-xl shadow-[#17324d]/18">
-            <h2 className="text-2xl font-black">Resource roadmap</h2>
+            <h2 className="text-2xl font-black">Inside the Activity Pack</h2>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               {[
-                "Weekly kindness activity tied to a character catchphrase",
-                "Keke reef care facts for libraries and classrooms",
-                "Spike courage sheets for trying new things",
-                "Lily calm-down prompts for circle time",
-                "Sparkle Bay certificate after children finish the activity pack",
+                "Ollie coloring pages",
+                "Ollie character activity sheets",
+                "Bubble maze",
+                "Kelp Forest kindness prompts",
+                "Sparkle Bay certificate",
                 "Read-aloud questions for parents and teachers"
               ].map((item) => (
                 <p className="rounded-xl bg-white/10 p-4 leading-7" key={item}>

@@ -19,7 +19,7 @@ export default function BlogPage() {
             centered
             eyebrow="Blog"
             title="Sparkle Bay notes for parents and teachers"
-            text="Starter article drafts to support search traffic, classroom use, and long-term brand authority."
+            text="Warm read-aloud notes, ocean learning ideas, and simple kindness activities for families and classrooms."
           />
           <div className="mt-10 grid gap-4 md:grid-cols-2">
             {blogPosts.map((post) => (

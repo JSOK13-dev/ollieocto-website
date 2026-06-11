@@ -3,7 +3,7 @@ import { ExternalLink, Package, ShieldCheck } from "lucide-react";
 import { AmazonPayButton } from "@/components/amazon-pay-button";
 import { BookCover } from "@/components/book-cover";
 import { ButtonLink } from "@/components/button-link";
-import { bookInfo } from "@/lib/site";
+import { amazonBookUrl, bookInfo } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Buy the Book",
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     `Buy ${bookInfo.title} by ${bookInfo.author} directly, use Amazon Pay checkout, or choose retailer fallback options.`
 };
 
-const amazonUrl = process.env.NEXT_PUBLIC_AMAZON_BUY_URL || "https://www.amazon.com/";
+const amazonUrl = process.env.NEXT_PUBLIC_AMAZON_BUY_URL || amazonBookUrl;
 const ingramUrl =
   process.env.NEXT_PUBLIC_INGRAMSPARK_RETAILER_URL || "https://shop.ingramspark.com/";
 const stripeUrl = process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK;
@@ -20,7 +20,12 @@ export default function BuyPage() {
   return (
     <section className="px-5 py-14 md:py-20">
       <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-start">
-        <BookCover />
+        <div>
+          <BookCover />
+          <p className="mt-4 text-center text-sm font-black uppercase tracking-[0.14em] text-[#5b2a86]">
+            Available on Amazon
+          </p>
+        </div>
         <div>
           <p className="text-sm font-black uppercase tracking-[0.18em] text-[#ff7c70]">
             Buy the book

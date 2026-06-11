@@ -1,7 +1,16 @@
 import { Camera, Mail, MessageCircle, PlayCircle } from "lucide-react";
 import Link from "next/link";
 import { EmailSignup } from "@/components/email-signup";
-import { navItems } from "@/lib/site";
+import { amazonBookUrl } from "@/lib/site";
+
+const footerLinks = [
+  { href: amazonBookUrl, label: "Book" },
+  { href: "/characters", label: "Meet Ollie" },
+  { href: "/activity-pack", label: "Free Pack" },
+  { href: "/about-ollie", label: "About" },
+  { href: "/contact", label: "Contact" },
+  { href: "/privacy-policy", label: "Privacy" }
+];
 
 export function Footer() {
   return (
@@ -10,15 +19,23 @@ export function Footer() {
         <div>
           <p className="text-2xl font-black">Ollie the Octopus</p>
           <p className="mt-3 max-w-md text-sm leading-6 text-white/78">
-            Ocean adventures, friendship, courage, and gentle social-emotional
-            learning for preschool readers and the grown-ups who love them.
+            A bright, bubbly ocean adventure for young readers and families who
+            love friendship, curiosity, courage, and sea animals.
+          </p>
+          <p className="mt-3 text-sm font-bold text-[#ffd166]">
+            https://ollieocto.com
           </p>
         </div>
         <div>
           <p className="font-black">Explore</p>
           <div className="mt-3 grid grid-cols-2 gap-x-4 gap-y-2 text-sm leading-6 text-white/78 md:grid-cols-1">
-            {navItems.map((item) => (
-              <Link className="hover:text-white" href={item.href} key={item.href}>
+            {footerLinks.map((item) => (
+              <Link
+                className="hover:text-white"
+                href={item.href}
+                key={item.href}
+                target={item.href.startsWith("http") ? "_blank" : undefined}
+              >
                 {item.label}
               </Link>
             ))}
@@ -56,7 +73,7 @@ export function Footer() {
         <div>
           <p className="font-black">Free Activity Pack</p>
           <p className="mt-3 text-sm leading-6 text-white/72">
-            Coloring pages, a maze, character pages, and a Sparkle Bay
+            Coloring pages, an ocean maze, character pages, and a printable
             certificate for parents and teachers.
           </p>
           <div className="mt-4 text-[#17324d] [&_form]:shadow-none">

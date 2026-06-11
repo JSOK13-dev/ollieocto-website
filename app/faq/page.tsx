@@ -18,7 +18,7 @@ export default function FAQPage() {
             centered
             eyebrow="FAQ"
             title="Questions parents, teachers, and librarians may ask"
-            text="Use this page to support search, trust, and conversion as the brand grows."
+            text="Helpful answers for families, teachers, librarians, and little ocean explorers."
           />
           <div className="mt-10 grid gap-4">
             {faqItems.map((item) => (
