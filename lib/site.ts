@@ -15,6 +15,8 @@ import {
 export const amazonBookUrl =
   "https://www.amazon.com/Ollie-Octopus-Great-Bubble-Chase/dp/B0GZCRKG4P";
 
+export const siteBuildVersion = "2026-06-11-ollie-launch";
+
 export const navItems = [
   { href: "/", label: "Home" },
   { href: "/about-ollie", label: "About Ollie" },
