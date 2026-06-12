@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { activityPackDownloadUrl } from "@/lib/site";
 
 export async function POST(request: Request) {
   const body = (await request.json().catch(() => null)) as {
@@ -18,6 +19,7 @@ export async function POST(request: Request) {
     ok: true,
     message:
       "Signup received. Welcome to Sparkle Bay.",
+    downloadUrl: activityPackDownloadUrl,
     source: body.source || "unknown",
     interest: body.interest || "activity-pack"
   });

@@ -29,7 +29,8 @@ export default function ActivityPackPage() {
           <p className="mt-4 max-w-2xl text-lg leading-8 text-[#44617a]">
             A parent and teacher-friendly printable pack that introduces the
             Sparkle Bay crew while building coloring, observation, problem
-            solving, and confidence.
+            solving, and confidence. Enter your email and the download opens
+            right away.
           </p>
           <div className="mt-8">
             <EmailSignup

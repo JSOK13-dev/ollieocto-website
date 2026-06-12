@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { CheckCircle2 } from "lucide-react";
-import { amazonBookUrl } from "@/lib/site";
+import { CheckCircle2, Download } from "lucide-react";
+import { activityPackDownloadUrl, amazonBookUrl } from "@/lib/site";
 
 export default function WelcomePage() {
   return (
@@ -10,25 +10,36 @@ export default function WelcomePage() {
         Welcome to Sparkle Bay
       </p>
       <h1 className="mt-3 text-4xl font-black leading-tight text-[#17324d]">
-        Your Ollie Ocean Adventure Activity Pack is on the way.
+        Your Activity Pack Is Ready
       </h1>
       <p className="mt-4 text-lg leading-8 text-[#44617a]">
-        Check your inbox soon for coloring pages, an ocean maze, character
-        activities, and a kindness certificate from Sparkle Bay.
+        Download the final Ollie Ocean Adventure Pack with coloring pages,
+        activities, and printable fun from Sparkle Bay.
       </p>
       <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-        <Link
-          className="rounded-full bg-[#ffd166] px-6 py-3 font-black text-[#17324d]"
-          href="/youtube"
+        <a
+          className="inline-flex items-center justify-center gap-2 rounded-full bg-[#ff7c70] px-6 py-3 font-black text-white shadow-lg shadow-[#ff7c70]/25"
+          download
+          href={activityPackDownloadUrl}
+          style={{ color: "#ffffff" }}
         >
-          Watch Ollie Videos
+          <Download aria-hidden="true" size={18} />
+          <span>Download Activity Pack</span>
+        </a>
+        <Link
+          className="inline-flex items-center justify-center rounded-full bg-[#ffd166] px-6 py-3 font-black text-[#17324d]"
+          href="/youtube"
+          style={{ color: "#17324d" }}
+        >
+          <span>Watch Ollie Videos</span>
         </Link>
         <Link
-          className="rounded-full bg-[#17324d] px-6 py-3 font-black text-white"
+          className="inline-flex items-center justify-center rounded-full bg-[#17324d] px-6 py-3 font-black text-white"
           href={amazonBookUrl}
+          style={{ color: "#ffffff" }}
           target="_blank"
         >
-          Buy on Amazon
+          <span>Buy on Amazon</span>
         </Link>
       </div>
     </section>

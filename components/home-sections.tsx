@@ -1,11 +1,11 @@
-import { CheckCircle2, Download, ShoppingBag } from "lucide-react";
+import { CheckCircle2, Download, ShoppingBag, Star } from "lucide-react";
 import Image from "next/image";
 import { BookCover } from "@/components/book-cover";
 import { ButtonLink } from "@/components/button-link";
 import { CharacterGrid } from "@/components/character-card";
 import { EmailSignup } from "@/components/email-signup";
 import { SectionHeading } from "@/components/section-heading";
-import { amazonBookUrl, artwork, bookInfo, testimonials, videoAssets } from "@/lib/site";
+import { amazonBookUrl, amazonReviewsUrl, artwork, bookInfo, testimonials, videoAssets } from "@/lib/site";
 
 export function HomeHero() {
   return (
@@ -167,7 +167,7 @@ export function ActivityPackSection() {
     <section className="deep-sea-band px-5 py-16 text-[#17324d]" id="free-pack">
       <BubbleField subtle />
       <div className="relative z-10 mx-auto grid max-w-7xl gap-8 md:grid-cols-[0.95fr_1.05fr] md:items-center">
-        <div className="rounded-[2rem] bg-white/92 p-5 shadow-xl shadow-[#17324d]/10 ring-1 ring-[#17324d]/8 md:p-7">
+        <div className="rounded-[2rem] border-4 border-white bg-[#fffaf0] p-5 shadow-xl shadow-[#17324d]/10 ring-1 ring-[#17324d]/8 md:p-7">
           <p className="text-sm font-black uppercase tracking-[0.18em] text-[#ff9f1c]">
             Free Parent & Teacher Resource
           </p>
@@ -207,11 +207,44 @@ export function ActivityPackSection() {
 export function ReviewsSection() {
   return (
     <section className="storybook-band bg-[#fffaf0] px-5 py-16">
-      <div className="relative z-10 mx-auto max-w-4xl text-center">
-        <p className="storybook-eyebrow mx-auto">Reviews</p>
-        <h2 className="mt-4 text-3xl font-black leading-tight text-[#17324d] md:text-5xl">
-          {testimonials[0].quote}
-        </h2>
+      <div className="relative z-10 mx-auto max-w-7xl">
+        <SectionHeading
+          centered
+          eyebrow="Amazon Reviews"
+          title="Families are loving Ollie's first adventure"
+          text="Short excerpts from verified Amazon readers."
+        />
+        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          {testimonials.map((review) => (
+            <article
+              className="rounded-[1.5rem] bg-white p-5 shadow-lg shadow-[#17324d]/8 ring-1 ring-[#17324d]/8"
+              key={review.name}
+            >
+              <div aria-label="5 out of 5 stars" className="flex gap-1 text-[#ffc43d]">
+                {[0, 1, 2, 3, 4].map((star) => (
+                  <Star aria-hidden="true" fill="currentColor" key={star} size={18} />
+                ))}
+              </div>
+              <h3 className="mt-4 font-brand text-xl font-black leading-tight text-[#17324d]">
+                {review.title}
+              </h3>
+              <p className="mt-3 leading-7 text-[#31546f]">
+                &quot;{review.quote}&quot;
+              </p>
+              <p className="mt-4 text-sm font-black text-[#5b2a86]">
+                {review.name}
+              </p>
+              <p className="mt-1 text-xs font-bold uppercase tracking-[0.12em] text-[#ff7c70]">
+                {review.detail}
+              </p>
+            </article>
+          ))}
+        </div>
+        <div className="mt-8 flex justify-center">
+          <ButtonLink href={amazonReviewsUrl} target="_blank" variant="ghost">
+            Read more on Amazon
+          </ButtonLink>
+        </div>
       </div>
     </section>
   );

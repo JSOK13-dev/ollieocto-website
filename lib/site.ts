@@ -17,6 +17,12 @@ export const amazonBookUrl =
 
 export const siteBuildVersion = "2026-06-11-ollie-launch";
 
+export const amazonReviewsUrl =
+  "https://www.amazon.com/portal/customer-reviews/B0GZCRKG4P/ref=acr_dpx_hist_5?ie=UTF8&filterByStar=five_star&reviewerType=all_reviews#reviews-filter-bar";
+
+export const activityPackDownloadUrl =
+  "/downloads/ollie-ocean-adventure-pack.pdf";
+
 export const navItems = [
   { href: "/", label: "Home" },
   { href: "/about-ollie", label: "About Ollie" },
@@ -181,8 +187,28 @@ export const bookInfo = {
 
 export const testimonials = [
   {
-    quote: "Coming Soon: Reviews from parents, teachers, and early readers.",
-    name: "Reviews coming soon"
+    quote: "Perfect for a young child, great artwork and the story is delightful.",
+    name: "Lauren Ann Lang",
+    title: "Love Ollie the Octopus & The Great Bubble Chase!",
+    detail: "5-star verified Amazon review"
+  },
+  {
+    quote: "She asked me to read it to her again and again.",
+    name: "Purity Natural Beauty",
+    title: "Unique, Adorable, Loved It",
+    detail: "5-star verified Amazon review"
+  },
+  {
+    quote: "My baby LOVES the illustrations!",
+    name: "Mark S.",
+    title: "GREAT baby book!",
+    detail: "5-star verified Amazon review"
+  },
+  {
+    quote: "Great book with beautiful illustrations.",
+    name: "Sharon",
+    title: "Excellent book and creative illustrations.",
+    detail: "5-star verified Amazon review"
   }
 ];
 
