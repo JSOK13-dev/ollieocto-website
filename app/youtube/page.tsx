@@ -6,9 +6,11 @@ import { SectionHeading } from "@/components/section-heading";
 import { StickySignup } from "@/components/sticky-signup";
 import {
   latestVideos,
+  firstShortUrl,
   longFormIdeas,
   shortsIdeas,
   videoAssets,
+  youtubeChannelUrl,
   youtubePlaylists
 } from "@/lib/site";
 
@@ -58,7 +60,7 @@ export default function YouTubePage() {
           <div className="mt-8 flex justify-center">
             <ButtonLink
               className="w-full max-w-sm sm:w-auto"
-              href="https://www.youtube.com/"
+              href={youtubeChannelUrl}
               target="_blank"
               variant="sun"
             >
@@ -80,8 +82,16 @@ export default function YouTubePage() {
                   src={videoAssets.firstShort}
                 />
                 <p className="mt-3 text-center font-black">
-                  Ollie the Octopus Short
+                  Meet Ollie the Octopus
                 </p>
+                <a
+                  className="mt-2 block text-center text-sm font-bold text-[#ffd166] underline-offset-4 hover:underline"
+                  href={firstShortUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Watch on YouTube Shorts
+                </a>
               </div>
               {latestVideos.map((video) => (
                 <div

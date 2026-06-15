@@ -1,7 +1,7 @@
 import { Camera, Mail, MessageCircle, PlayCircle } from "lucide-react";
 import Link from "next/link";
 import { EmailSignup } from "@/components/email-signup";
-import { amazonBookUrl } from "@/lib/site";
+import { amazonBookUrl, youtubeChannelUrl } from "@/lib/site";
 
 const footerLinks = [
   { href: amazonBookUrl, label: "Book" },
@@ -47,7 +47,7 @@ export function Footer() {
             {[
               { icon: Camera, label: "Instagram", href: "#" },
               { icon: MessageCircle, label: "Facebook", href: "#" },
-              { icon: PlayCircle, label: "YouTube", href: "#" },
+              { icon: PlayCircle, label: "YouTube", href: youtubeChannelUrl },
               { icon: Mail, label: "Email", href: "mailto:hello@example.com" }
             ].map((item) => {
               const Icon = item.icon;

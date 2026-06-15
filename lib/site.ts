@@ -23,6 +23,10 @@ export const amazonReviewsUrl =
 export const activityPackDownloadUrl =
   "/downloads/ollie-ocean-adventure-pack.pdf";
 
+export const youtubeChannelUrl = "https://www.youtube.com/@ollieoctopusbook";
+
+export const firstShortUrl = "https://youtube.com/shorts/DuNwBVFgUs8";
+
 export const seoKeywords = [
   "Ollie the Octopus",
   "Ollie the Octopus and the Great Bubble Chase",
