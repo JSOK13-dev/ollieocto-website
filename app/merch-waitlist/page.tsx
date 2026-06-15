@@ -5,9 +5,12 @@ import { SectionHeading } from "@/components/section-heading";
 import { merchWaitlistItems } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Merchandise Waitlist",
+  title: "Ollie the Octopus Merch Waitlist | Plush, Stickers, Activity Book",
   description:
-    "Join the Ollie the Octopus plush toy, sticker pack, and coloring book waitlists."
+    "Join the Ollie the Octopus merch waitlist for future plush toys, Sparkle Bay stickers, and Ollie activity books.",
+  alternates: {
+    canonical: "/merch-waitlist"
+  }
 };
 
 export default function MerchWaitlistPage() {

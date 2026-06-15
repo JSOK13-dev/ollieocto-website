@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { CheckCircle2, Download } from "lucide-react";
 import { activityPackDownloadUrl, amazonBookUrl } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: "Activity Pack Download",
+  description: "Download the Ollie Ocean Adventure Activity Pack.",
+  robots: {
+    index: false,
+    follow: false
+  }
+};
 
 export default function WelcomePage() {
   return (

@@ -4,9 +4,12 @@ import { StickySignup } from "@/components/sticky-signup";
 import { SectionHeading } from "@/components/section-heading";
 
 export const metadata: Metadata = {
-  title: "Character Universe",
+  title: "Ollie the Octopus Characters | Meet the Sparkle Bay Friends",
   description:
-    "Meet Ollie the Octopus and the colorful friends of Sparkle Bay."
+    "Meet Ollie the Octopus, Stella Starfish, Finn the Pufferfish, Zippy the Seahorse, Coral the Crab, Grumpy Gus, Keke, and the colorful friends of Sparkle Bay.",
+  alternates: {
+    canonical: "/characters"
+  }
 };
 
 export default function CharactersPage() {

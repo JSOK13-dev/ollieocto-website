@@ -6,9 +6,12 @@ import { SectionHeading } from "@/components/section-heading";
 import { artwork, futureAdventureIdeas, sparkleBayLocations } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Sparkle Bay",
+  title: "Sparkle Bay | Ollie the Octopus Ocean Adventure World",
   description:
-    "Explore Sparkle Bay, the coral areas, and the Kelp Forest from Ollie the Octopus and the Great Bubble Chase."
+    "Explore Sparkle Bay, the underwater world of Ollie the Octopus with coral paths, the Kelp Forest, friendship moments, and preschool ocean adventure settings.",
+  alternates: {
+    canonical: "/sparkle-bay"
+  }
 };
 
 const placeNames = ["Sparkle Bay", "The Coral Path", "The Kelp Forest"];

@@ -13,9 +13,12 @@ import {
 } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Ollie Videos",
+  title: "Ollie the Octopus Videos | Storytime, Shorts, and Ocean Fun",
   description:
-    "Ollie the Octopus videos, storytime moments, bubbly shorts, and gentle ocean fun for families."
+    "Watch Ollie the Octopus videos, storytime moments, bubbly Shorts, ocean facts, and preschool-friendly Sparkle Bay adventures for families.",
+  alternates: {
+    canonical: "/youtube"
+  }
 };
 
 const titleFormulas = [

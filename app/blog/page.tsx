@@ -5,9 +5,12 @@ import { SectionHeading } from "@/components/section-heading";
 import { blogPosts } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "Ollie the Octopus Blog | Read-Aloud, Ocean Animals, and Kindness",
   description:
-    "Read Ollie the Octopus articles about read-aloud time, ocean animals, kindness, and preschool social-emotional learning."
+    "Read Ollie the Octopus articles for parents and teachers about read-aloud time, ocean animals, kindness stories, and preschool social-emotional learning.",
+  alternates: {
+    canonical: "/blog"
+  }
 };
 
 export default function BlogPage() {

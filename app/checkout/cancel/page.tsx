@@ -1,5 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { AlertCircle } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Checkout Canceled",
+  robots: {
+    index: false,
+    follow: false
+  }
+};
 
 export default function CheckoutCancelPage() {
   return (

@@ -6,9 +6,12 @@ import { ButtonLink } from "@/components/button-link";
 import { amazonBookUrl, bookInfo } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Buy the Book",
+  title: `Buy ${bookInfo.title} | Amazon Paperback and Kindle`,
   description:
-    `Buy ${bookInfo.title} by ${bookInfo.author} directly, use Amazon Pay checkout, or choose retailer fallback options.`
+    `Buy ${bookInfo.title} by ${bookInfo.author}, a colorful octopus children's book and ocean adventure picture book for young readers ages 3-5.`,
+  alternates: {
+    canonical: "/buy"
+  }
 };
 
 const amazonUrl = process.env.NEXT_PUBLIC_AMAZON_BUY_URL || amazonBookUrl;

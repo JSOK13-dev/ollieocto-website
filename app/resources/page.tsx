@@ -5,9 +5,12 @@ import { StickySignup } from "@/components/sticky-signup";
 import { resourceCards } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Free Coloring Pages and Parent Resources",
+  title: "Free Ollie Coloring Pages and Preschool Ocean Resources",
   description:
-    "Download free Ollie the Octopus coloring pages, parent resources, teacher prompts, and preschool friendship activities."
+    "Free Ollie the Octopus coloring pages, parent resources, teacher prompts, read-aloud questions, ocean facts, and preschool friendship activities.",
+  alternates: {
+    canonical: "/resources"
+  }
 };
 
 export default function ResourcesPage() {

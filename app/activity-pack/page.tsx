@@ -5,9 +5,12 @@ import { SectionHeading } from "@/components/section-heading";
 import { activityPackItems, brandMessage } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Free Ollie Ocean Adventure Activity Pack",
+  title: "Free Ollie Ocean Adventure Activity Pack | Coloring Pages and Maze",
   description:
-    "Get free Ollie the Octopus coloring pages, spot the difference, ocean maze, character pages, and printable certificate."
+    "Download the free Ollie Ocean Adventure Activity Pack with printable coloring pages, an ocean maze, character activities, and preschool-friendly Sparkle Bay fun.",
+  alternates: {
+    canonical: "/activity-pack"
+  }
 };
 
 const icons = [Palette, Eye, Map, ScrollText, Star, Award];

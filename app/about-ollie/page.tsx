@@ -6,9 +6,12 @@ import { SectionHeading } from "@/components/section-heading";
 import { artwork } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "About Ollie",
+  title: "About Ollie the Octopus | Main Character and Story World",
   description:
-    "Meet Ollie the Octopus, a kind and curious picture book character for preschool ocean adventures."
+    "Meet Ollie the Octopus, a curious and kind children's picture book character from Sparkle Bay with eight helping arms and a love of ocean adventures.",
+  alternates: {
+    canonical: "/about-ollie"
+  }
 };
 
 export default function AboutOlliePage() {

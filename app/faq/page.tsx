@@ -4,14 +4,34 @@ import { SectionHeading } from "@/components/section-heading";
 import { faqItems } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "FAQ",
+  title: "Ollie the Octopus FAQ | Ages, Themes, Resources, and Storytime",
   description:
-    "Frequently asked questions about Ollie the Octopus, Sparkle Bay, character learning themes, and free resources."
+    "Frequently asked questions about Ollie the Octopus, Sparkle Bay, ages 3-5, story themes, classroom resources, and free activity pack downloads.",
+  alternates: {
+    canonical: "/faq"
+  }
 };
 
 export default function FAQPage() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer
+      }
+    }))
+  };
+
   return (
     <>
+      <script
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        type="application/ld+json"
+      />
       <section className="px-5 py-14 md:py-20">
         <div className="mx-auto max-w-4xl">
           <SectionHeading

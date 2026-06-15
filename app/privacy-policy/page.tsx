@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy",
-  description: "Privacy policy for Ollie the Octopus."
+  title: "Privacy Policy | Ollie the Octopus",
+  description:
+    "Privacy policy for the Ollie the Octopus website, activity pack signup, analytics, checkout, and parent or teacher contact information.",
+  alternates: {
+    canonical: "/privacy-policy"
+  }
 };
 
 export default function PrivacyPolicyPage() {

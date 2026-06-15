@@ -3,9 +3,12 @@ import { Mail, MessageCircle } from "lucide-react";
 import { SectionHeading } from "@/components/section-heading";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact Joshua Sokolow | Ollie the Octopus Author Visits",
   description:
-    "Contact the creator of Ollie the Octopus for author visits, book questions, partnerships, and media."
+    "Contact Joshua Sokolow about Ollie the Octopus author visits, school and library storytime, book questions, partnerships, and media.",
+  alternates: {
+    canonical: "/contact"
+  }
 };
 
 export default function ContactPage() {

@@ -23,6 +23,28 @@ export const amazonReviewsUrl =
 export const activityPackDownloadUrl =
   "/downloads/ollie-ocean-adventure-pack.pdf";
 
+export const seoKeywords = [
+  "Ollie the Octopus",
+  "Ollie the Octopus and the Great Bubble Chase",
+  "octopus children's book",
+  "octopus picture book",
+  "ocean adventure book for kids",
+  "sea animal picture book",
+  "bedtime story ages 3-5",
+  "preschool ocean book",
+  "friendship picture book",
+  "kindness children's book",
+  "social emotional learning children's book",
+  "SEL picture book",
+  "read aloud picture book",
+  "children's book about courage",
+  "children's book about teamwork",
+  "ocean animals for preschool",
+  "free ocean coloring pages",
+  "free preschool activity pack",
+  "Sparkle Bay"
+];
+
 export const navItems = [
   { href: "/", label: "Home" },
   { href: "/about-ollie", label: "About Ollie" },
@@ -175,7 +197,10 @@ export const bookInfo = {
   pages: 24,
   copyrightYear: 2026,
   description:
-    "Meet Ollie, a curious little octopus who follows a mysterious bubble through an unforgettable ocean adventure about friendship, curiosity, and courage.",
+    "Meet Ollie, a curious little octopus who follows a mysterious bubble through an unforgettable Sparkle Bay ocean adventure about friendship, curiosity, courage, kindness, and helping friends.",
+  isbn: "",
+  language: "en-US",
+  format: "Paperback and Kindle",
   themes: [
     "Friendship",
     "Teamwork",

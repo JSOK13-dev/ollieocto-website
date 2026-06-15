@@ -14,8 +14,17 @@ export function generateMetadata({
 }): Metadata {
   const post = blogPosts.find((item) => item.slug === params.slug);
   return {
-    title: post?.title || "Blog",
-    description: post?.excerpt
+    title: post ? `${post.title} | Ollie the Octopus Blog` : "Blog",
+    description: post?.excerpt,
+    alternates: {
+      canonical: post ? `/blog/${post.slug}` : "/blog"
+    },
+    openGraph: {
+      title: post?.title,
+      description: post?.excerpt,
+      url: post ? `/blog/${post.slug}` : "/blog",
+      type: "article"
+    }
   };
 }
 
